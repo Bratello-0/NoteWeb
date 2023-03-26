@@ -1,0 +1,26 @@
+﻿@using NoteWeb.Data.Models
+@model IEnumerable<NotePage>
+@{
+    Layout = null;
+}
+
+
+<!Document html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-widht"/>
+    <title>List</title>
+</head>
+<body>
+    <h2>Страницы</h2>
+    @{
+        foreach (var notePage in Model)
+        {
+            <div>
+                <h2>Заметка: @notePage.Name</h2>
+                <p>Описание: @notePage.Description</p>
+            </div>
+        }
+    }
+</body>
+</html>
